@@ -2,3 +2,8 @@
 // utilities/_index.scss
 // used to import individual utilities
 // **************************************
+
+// import utilities
+@import 'variables',
+        'mixins',
+        'placeholders';
