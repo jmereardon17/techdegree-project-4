@@ -4,9 +4,18 @@
 // **************************************
 
 // fonts
+$font-stack-primary: "Helvetica Neue", Helvetica, sans-serif;
+$font-stack-secondary: "Arial", serif;
 
 // breakpoints
 $break-s: 480px;
 $break-l: 1440px;
 
 // colors
+$mint-green: #58e1c1;
+
+$btn-bg-default: #51ddfc;
+$btn-bg-success: #63cc82;
+$btn-bg-error: #e4757a;
+$btn-bg-warning: #fd7856;
+$btn-bg-info: #927bc1;
