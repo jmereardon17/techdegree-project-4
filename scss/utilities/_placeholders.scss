@@ -8,3 +8,30 @@
 // Images
 
 // Nav Items
+
+// Buttons
+
+%btn {
+  display: block;
+  width: 100%;
+  font-size: .95em;
+  font-weight: $bold;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.6em;
+  border: none;
+  @include rounded(4px);
+  @include padding(.9em);
+}
+
+// Grid Columns
+
+%col {
+  font-size: .95em;
+  font-weight: $bold;
+  color: #888;
+  padding: .7em;
+  border: none;
+  @include rounded(4px);
+}
