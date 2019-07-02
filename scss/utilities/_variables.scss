@@ -3,19 +3,28 @@
 // used to create global variables
 // **************************************
 
-// fonts
-$font-stack-primary: "Helvetica Neue", Helvetica, sans-serif;
-$font-stack-secondary: "Arial", serif;
+// Colors
+$white: #fff;
 
-// breakpoints
+$primary-color: #51ddfc; // malibu blue
+$secondary-color: #58e1c1; // viking green
+$secondary-color-lt: lighten($secondary-color, 10%);
+$text-color: #999;
+
+$btn-default: $primary-color;
+$btn-success: #63cc82; // emerald green
+$btn-error: #e4757a; // sunglo red
+$btn-warning: #fd7856; // coral orange
+$btn-info: #927bc1; // purple mountain's majesty
+
+// Fonts
+$base-font-size: 16px;
+$primary-font-stack: "Lato", sans-serif;
+$secondary-font-stack: "Helvetica Neue", Helvetica, serif;
+
+// Layout
+
+
+// Breakpoints
 $break-s: 480px;
 $break-l: 1440px;
-
-// colors
-$mint-green: #58e1c1;
-
-$btn-bg-default: #51ddfc;
-$btn-bg-success: #63cc82;
-$btn-bg-error: #e4757a;
-$btn-bg-warning: #fd7856;
-$btn-bg-info: #927bc1;
