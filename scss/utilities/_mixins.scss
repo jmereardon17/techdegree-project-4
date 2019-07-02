@@ -3,6 +3,27 @@
 // used to create mixins
 // **************************************
 
+// Theme Colors
+
+@mixin themes($color) {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: .95em;
+  font-weight: 700;
+  padding: .9em;
+  background-color: $color;
+}
+
+// Layout
+
+@mixin center {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 1.2em; // 1em previously.
+}
+
 // Media Queries
 
 // Flexbox Settings
