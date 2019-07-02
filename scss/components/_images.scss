@@ -2,3 +2,19 @@
 // _images.scss
 // styles related to the images
 // **********************************************
+
+.img--logo {
+  display: block;
+  margin: 14px auto 0;
+}
+
+.img--avatar {
+  display: block;
+  margin: 20px auto;
+}
+
+.img--frame {
+  border: 1px solid #ccc;
+  padding: 12px;
+  width: 400px;
+}

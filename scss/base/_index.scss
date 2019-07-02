@@ -3,4 +3,5 @@
 // Base Sass file used to import partials
 // **************************************
 
-@import 'base';
+@import 'normalize',
+        'base';

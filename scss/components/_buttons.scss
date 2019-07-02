@@ -2,3 +2,38 @@
 // _buttons.scss
 // styles related to the buttons
 // **********************************************
+
+%btn {
+  @include themes($btn-default);
+  color: $white;
+  font-size: .95em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.6em;
+}
+
+.btn--default {
+  @extend %btn;
+  @include themes($btn-default);
+}
+
+.btn--success {
+  @extend %btn;
+  @include themes($btn-success);
+}
+
+.btn--error {
+  @extend %btn;
+  @include themes($btn-error);
+}
+
+.btn--warning {
+  @extend %btn;
+  @include themes($btn-warning);
+}
+
+.btn--info {
+  @extend %btn;
+  @include themes($btn-info);
+}

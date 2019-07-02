@@ -6,6 +6,10 @@
 // but additional styling may be needed
 // **********************************************
 
+// main container
+.container {
+  @include center;
+}
 
 // grid base class
 .grid {
@@ -33,7 +37,7 @@
       // selector would be .grid__col--1
       &--#{$i} {
 
-        // base styles applied to all grid columns 
+        // base styles applied to all grid columns
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
         margin-top: 10px;
@@ -49,6 +53,30 @@
           flex-basis: #{$i / 12 * 100 + "%"} ;
         }
       }
+    }
+  }
+
+  &__col--4 {
+    margin-bottom: 30px;
+  }
+
+  &__col--6 {
+    @include themes($primary-color);
+  }
+
+  &__col--8 {
+    .card {
+      padding: 0 .5em;
+    }
+  }
+
+  &__col--12 {
+    .card {
+      margin-top: 60px;
+      padding: 0 .5em;
+    }
+    &.theme__colors {
+      @include themes($secondary-color-lt);
     }
   }
 }
