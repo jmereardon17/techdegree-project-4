@@ -1,4 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
+.btn--info, .btn--warning, .btn--error, .btn--success, .btn--default {
+  display: block;
+  width: 100%;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.6em;
+  border: none;
+  border-radius: 4px;
+  padding: 0.9em 0;
+}
+
+.theme__colors.grid__col--12, .theme__colors.grid__col--8, .theme__colors.grid__col--7, .theme__colors.grid__col--6, .theme__colors.grid__col--5, .theme__colors.grid__col--4, .theme__colors.grid__col--3, .theme__colors.grid__col--1 {
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #888;
+  padding: 0.7em;
+  border: none;
+  border-radius: 4px;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -360,7 +383,7 @@ a {
 .container {
   width: 95%;
   margin: 0 auto;
-  padding: 0 1.2em;
+  padding: 0 1.2em 1.4em 1.2em;
 }
 
 .grid__row {
@@ -496,38 +519,88 @@ a {
 .grid__col--4 {
   margin-bottom: 30px;
 }
-.grid__col--6 {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95em;
-  font-weight: 700;
-  padding: 0.9em;
-  background-color: #51ddfc;
-}
 .grid__col--8 .card {
   padding: 0 0.5em;
 }
 .grid__col--12 .card {
   margin-top: 60px;
+  margin-bottom: 40px;
   padding: 0 0.5em;
 }
+.grid__col--3.theme__colors {
+  margin-top: 18px;
+}
+.grid__col--3.theme__colors + .grid__col--3.theme__colors {
+  margin-top: 6px;
+}
+.grid__col--4.theme__colors {
+  margin-bottom: 0px;
+}
+.grid__col--4.theme__colors + .grid__col--4.theme__colors {
+  margin-top: 6px;
+}
+.grid__col--5.theme__colors {
+  margin-top: 18px;
+}
+.grid__col--6.theme__colors + .grid__col--6.theme__colors {
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+.grid__col--7.theme__colors {
+  margin-top: 6px;
+}
+.grid__col--7.centered {
+  margin-top: 18px;
+}
+.grid__col--8.theme__colors {
+  margin-top: 18px;
+  margin-bottom: -5px;
+}
 .grid__col--12.theme__colors {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95em;
-  font-weight: 700;
-  padding: 0.9em;
-  background-color: #83e9d1;
+  margin-bottom: 8px;
 }
 
 @media (min-width: 768px) {
   [class^=grid__col] + [class^=grid__col] {
     margin-left: 10px;
   }
+}
+
+.theme__colors.grid__col--1 {
+  background-color: #fff;
+}
+.theme__colors.grid__col--1 {
+  background-color: #fff;
+}
+.theme__colors.grid__col--3 {
+  background-color: #ddb2ed;
+}
+.theme__colors.grid__col--4 {
+  background-color: #7ee7fc;
+}
+.theme__colors.grid__col--5 {
+  background-color: #89d99f;
+}
+.theme__colors.grid__col--6 {
+  background-color: #40acc9;
+}
+.theme__colors.grid__col--7 {
+  background-color: #eba0a3;
+}
+.theme__colors.grid__col--8 {
+  background-color: #fca086;
+}
+.theme__colors.grid__col--1 {
+  background-color: #fff;
+}
+.theme__colors.grid__col--1 {
+  background-color: #fff;
+}
+.theme__colors.grid__col--1 {
+  background-color: #fff;
+}
+.theme__colors.grid__col--12 {
+  background-color: #81e6ce;
 }
 
 .container {
@@ -599,75 +672,24 @@ a {
   width: 400px;
 }
 
-.btn--info, .btn--warning, .btn--error, .btn--success, .btn--default {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95em;
-  font-weight: 700;
-  padding: 0.9em;
-  background-color: #51ddfc;
-  color: #fff;
-  font-size: 0.95em;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 1.6em;
-}
-
 .btn--default {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95em;
-  font-weight: 700;
-  padding: 0.9em;
+  margin-top: 18px;
   background-color: #51ddfc;
 }
 
 .btn--success {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95em;
-  font-weight: 700;
-  padding: 0.9em;
   background-color: #63cc82;
 }
 
 .btn--error {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95em;
-  font-weight: 700;
-  padding: 0.9em;
   background-color: #e4757a;
 }
 
 .btn--warning {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95em;
-  font-weight: 700;
-  padding: 0.9em;
   background-color: #fd7856;
 }
 
 .btn--info {
-  display: block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.95em;
-  font-weight: 700;
-  padding: 0.9em;
   background-color: #927bc1;
 }
 

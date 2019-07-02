@@ -8,12 +8,12 @@
   a {
     display: block;
     text-align: center;
-    padding: .8em 0;
+    @include padding(.8em);
     font-size: 1.1em;
     &:hover {
-      background-color: $secondary-color;
+      @include background($secondary-color);
       color: $white;
-      border-radius: 4px;
+      @include rounded(4px);
     }
   }
 }

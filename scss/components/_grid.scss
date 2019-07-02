@@ -8,7 +8,9 @@
 
 // main container
 .container {
-  @include center;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 1.2em 1.4em 1.2em // 1em previously.
 }
 
 // grid base class
@@ -60,24 +62,50 @@
     margin-bottom: 30px;
   }
 
-  &__col--6 {
-    @include themes($primary-color);
-  }
-
   &__col--8 {
     .card {
-      padding: 0 .5em;
+      @include padding(0, .5em);
     }
   }
 
   &__col--12 {
     .card {
       margin-top: 60px;
-      padding: 0 .5em;
+      margin-bottom: 40px;
+      @include padding(0, .5em);
     }
-    &.theme__colors {
-      @include themes($secondary-color-lt);
-    }
+  }
+  &__col--3.theme__colors {
+    margin-top: 18px;
+  }
+  &__col--3.theme__colors + &__col--3.theme__colors {
+    margin-top: 6px;
+  }
+  &__col--4.theme__colors {
+    margin-bottom: 0px;
+  }
+  &__col--4.theme__colors + &__col--4.theme__colors {
+    margin-top: 6px;
+  }
+  &__col--5.theme__colors {
+    margin-top: 18px;
+  }
+  &__col--6.theme__colors + &__col--6.theme__colors {
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+  &__col--7.theme__colors {
+    margin-top: 6px;
+  }
+  &__col--7.centered {
+    margin-top: 18px;
+  }
+  &__col--8.theme__colors {
+    margin-top: 18px;
+    margin-bottom: -5px;
+  }
+  &__col--12.theme__colors {
+    margin-bottom: 8px;
   }
 }
 
@@ -92,5 +120,18 @@
       // add grid gutter
       margin-left: 10px;
     }
+  }
+}
+
+// loop for grid columns to style the background-color
+.theme__colors.grid__col {
+  @each $color in $theme-colors {
+
+    $i: index($theme-colors, $color);
+    &--#{$i} {
+      @include background($color);
+      @extend %col;
+    }
+
   }
 }

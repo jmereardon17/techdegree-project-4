@@ -3,37 +3,28 @@
 // styles related to the buttons
 // **********************************************
 
-%btn {
-  @include themes($btn-default);
-  color: $white;
-  font-size: .95em;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 1.6em;
-}
-
 .btn--default {
+  margin-top: 18px;
   @extend %btn;
-  @include themes($btn-default);
+  @include background($btn-default);
 }
 
 .btn--success {
   @extend %btn;
-  @include themes($btn-success);
+  @include background($btn-success);
 }
 
 .btn--error {
   @extend %btn;
-  @include themes($btn-error);
+  @include background($btn-error);
 }
 
 .btn--warning {
   @extend %btn;
-  @include themes($btn-warning);
+  @include background($btn-warning);
 }
 
 .btn--info {
   @extend %btn;
-  @include themes($btn-info);
+  @include background($btn-info);
 }
