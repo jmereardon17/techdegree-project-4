@@ -16,5 +16,9 @@
 .img--frame {
   border: 1px solid #ccc;
   padding: 12px;
-  width: 400px;
+  max-width: 100%;
+  display: block;
+  @media (min-width: $break-s) {
+    @include center(400px);
+  }
 }
