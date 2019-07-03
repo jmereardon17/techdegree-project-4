@@ -381,8 +381,9 @@ a {
 }
 
 .container {
-  width: 95%;
-  margin: 0 auto;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 1.2em 1.4em 1.2em;
 }
 
