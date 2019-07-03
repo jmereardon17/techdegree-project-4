@@ -669,7 +669,15 @@ a {
 .img--frame {
   border: 1px solid #ccc;
   padding: 12px;
-  width: 400px;
+  max-width: 100%;
+  display: block;
+}
+@media (min-width: 480px) {
+  .img--frame {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .btn--default {
