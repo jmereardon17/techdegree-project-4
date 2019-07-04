@@ -19,10 +19,16 @@
   color: $white;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 1.6em;
+  margin-top: 1.6em;
   border: none;
   @include rounded(4px);
   @include padding(.9em);
+  @include mq('lg') {
+    display: inline-block;
+    max-width: 175px;
+    padding-left: .05em;
+    padding-right: .05em;
+  }
 }
 
 // Grid Columns

@@ -5,6 +5,18 @@
 
 .nav {
   margin-top: 45px;
+  @include mq('lg') {
+    margin-top: 24px;
+    margin-left: 130px;
+  }
+}
+
+.nav__item {
+  @include mq('lg') {
+    display: inline-block;
+    min-width: 90px;
+    margin-right: 20px;
+  }
   a {
     display: block;
     text-align: center;
@@ -14,6 +26,10 @@
       @include background($secondary-color);
       color: $white;
       @include rounded(4px);
+    }
+    @include mq('lg') {
+      font-size: 1.2em;
+      padding: 0.5em;
     }
   }
 }

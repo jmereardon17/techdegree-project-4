@@ -18,7 +18,9 @@
   padding: 12px;
   max-width: 100%;
   display: block;
-  @media (min-width: $break-s) {
-    @include center(400px);
+  @include mq('sm') {
+    @include center(430px);
+    margin-top: 20px;
+    margin-bottom: 5px;
   }
 }

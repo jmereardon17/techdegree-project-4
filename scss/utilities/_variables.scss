@@ -18,21 +18,14 @@ $btn-warning: #fd7856; // coral orange
 $btn-info: #927bc1; // purple mountain's majesty
 
 $theme-colors: (
-  // #81e6ce,
-  // #40acc9,
-  // #7ee7fc,
-  // #ddb2ed,
-  // #89d99f,
-  // #eba0a3,
-  // #fca086,
   #fff,
   #fff,
-  #ddb2ed, // 3
+  #ddb2ed,
   #7ee7fc,
   #89d99f,
   #40acc9,
   #eba0a3,
-  #fca086, // 8
+  #fca086,
   #fff,
   #fff,
   #fff,
@@ -51,8 +44,15 @@ $bold: 700;
 $black: 900;
 
 // Layout
-
+$max-width: 1150px;
 
 // Breakpoints
 $break-s: 480px;
+$break-m: 768px;
 $break-l: 1440px;
+
+$breakpoints: (
+  'sm': 480px,
+  'med': 768px,
+  'lg': 1440px,
+);

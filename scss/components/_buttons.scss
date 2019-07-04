@@ -4,7 +4,6 @@
 // **********************************************
 
 .btn--default {
-  margin-top: 18px;
   @extend %btn;
   @include background($btn-default);
 }
