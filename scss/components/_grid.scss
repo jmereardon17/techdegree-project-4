@@ -86,35 +86,79 @@
   }
   &__col--3.theme__colors {
     margin-top: 18px;
+    @include mq('lg') {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
   }
   &__col--3.theme__colors + &__col--3.theme__colors {
     margin-top: 6px;
+    @include mq('lg') {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
   }
   &__col--4.theme__colors {
     margin-bottom: 0px;
+    @include mq('lg') {
+      margin-bottom: 16px;
+    }
   }
   &__col--4.theme__colors + &__col--4.theme__colors {
     margin-top: 6px;
+    @include mq('lg') {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
   }
   &__col--5.theme__colors {
     margin-top: 18px;
+    @include mq('lg') {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
   }
   &__col--6.theme__colors + &__col--6.theme__colors {
     margin-top: 6px;
     margin-bottom: 8px;
+    @include mq('lg') {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+  }
+  &__col--6.theme__colors {
+    @include mq('lg') {
+      margin-bottom: 16px;
+    }
   }
   &__col--7.theme__colors {
     margin-top: 6px;
+    @include mq('lg') {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
   }
   &__col--7.centered {
     margin-top: 18px;
+    @include mq('lg') {
+      margin: auto;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
   }
   &__col--8.theme__colors {
     margin-top: 18px;
     margin-bottom: -5px;
+    @include mq('lg') {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
   }
   &__col--12.theme__colors {
     margin-bottom: 8px;
+    @include mq('lg') {
+      margin-bottom: 16px;
+    }
   }
 }
 
