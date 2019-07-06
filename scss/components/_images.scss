@@ -1,26 +1,25 @@
 // **********************************************
-// _images.scss
+// components/_images.scss
 // styles related to the images
 // **********************************************
 
-.img--logo {
-  display: block;
-  margin: 14px auto 0;
-}
+/* ==============================================
+  Image Styles
+================================================ */
 
-.img--avatar {
-  display: block;
-  margin: 20px auto;
-}
-
-.img--frame {
-  border: 1px solid #ccc;
-  padding: 12px;
-  max-width: 100%;
-  display: block;
-  @include mq('sm') {
-    @include center(430px);
+.img {
+  &--logo {
+    @extend %img;
+    margin-top: 14px;
+  }
+  &--avatar {
+    @extend %img;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 14px;
+  }
+  &--frame {
+    @extend %img;
+    border: 1px solid #ccc;
+    padding: 12px;
   }
 }

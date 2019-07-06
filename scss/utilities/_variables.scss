@@ -9,6 +9,7 @@ $white: #fff;
 $primary-color: #51ddfc; // malibu blue
 $secondary-color: #58e1c1; // viking green
 $secondary-color-lt: lighten($secondary-color, 10%);
+$color-shade: #888;
 $text-color: #999;
 
 $btn-default: $primary-color;
@@ -36,7 +37,7 @@ $theme-colors: (
 $base-font-size: 16px;
 
 $primary-font-stack: "Lato", sans-serif;
-$secondary-font-stack: "Helvetica Neue", Helvetica, serif;
+$secondary-font-stack: "Helvetica Neue", serif;
 
 $light: 300;
 $regular: 400;
@@ -47,12 +48,14 @@ $black: 900;
 $max-width: 1150px;
 
 // Breakpoints
-$break-s: 480px;
-$break-m: 768px;
+$break-xs: 480px;
+$break-s: 768px;
+$break-m: 998px;
 $break-l: 1440px;
 
 $breakpoints: (
-  'sm': 480px,
-  'med': 768px,
+  'xs': 480px,
+  'sm': 768px,
+  'med': 998px,
   'lg': 1440px,
 );

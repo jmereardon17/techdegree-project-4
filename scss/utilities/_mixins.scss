@@ -1,20 +1,14 @@
 // **************************************
-// utilities/mixins.scss
+// utilities/_mixins.scss
 // used to create mixins
 // **************************************
 
 // Theme Colors
-
 @mixin background($bg) {
   background-color: $bg;
 }
 
 // Layout
-
-@mixin padding($tb: 0, $lr: 0) {
-  padding: $tb $lr;
-}
-
 @mixin rounded($radius) {
   border-radius: $radius;
 }
@@ -25,13 +19,21 @@
   margin-right: auto;
 }
 
-// Media Queries
+@mixin spacing($top: null, $btm) {
+  margin-top: $top;
+  @content;
+  @include mq('sm') {
+    margin-top: 0;
+    margin-bottom: $btm;
+  }
+}
 
+// Media Queries
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);
-  $sm: map-get($breakpoints, 'sm');
+  $xs: map-get($breakpoints, 'xs');
 
-  @if $value < $sm {
+  @if $value < $xs {
     @media (max-width: $value) {
       @content;
     }
@@ -44,7 +46,6 @@
 }
 
 // Flexbox Settings
-
 @mixin flexbox(
   $disp: null,
   $dir: null,
@@ -55,4 +56,5 @@
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $just;
+  @content;
 }

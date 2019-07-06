@@ -4,44 +4,80 @@
 // **************************************
 
 // Links
+%link {
+  color: $primary-color;
+  font-weight: $black;
+  text-decoration: none;
+}
 
 // Images
+%img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 // Nav Items
+%nav__item {
+  @include mq('sm') {
+    display: inline-block;
+    min-width: 90px;
+    margin-right: 20px;
+  }
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #777;
+    padding: .8em;
+    font-size: 1.1em;
+    &:hover {
+      @include background($secondary-color);
+      color: $white;
+      @include rounded(4px);
+    }
+    @include mq('sm') {
+      font-size: 1.2em;
+      padding: 0.5em;
+    }
+  }
+}
 
 // Buttons
-
 %btn {
   display: block;
-  width: 100%;
+  width: 94%;
   font-size: .95em;
   font-weight: $bold;
   color: $white;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 1.6em;
+  margin: 1.6em auto 0;
   border: none;
   @include rounded(4px);
-  @include padding(.9em);
-  @include mq('lg') {
+  padding: .9em;
+  @include mq('med') {
     display: inline-block;
-    max-width: 175px;
+    width: 170px;
     padding-left: .05em;
     padding-right: .05em;
     margin-bottom: 1.6em;
   }
+  @include mq('lg') {
+    max-width: 175px;
+  }
 }
 
 // Grid Columns
-
 %col {
   font-size: .95em;
   font-weight: $bold;
-  color: #888;
-  padding: 11.5px;
+  color: $color-shade;
+  padding: 11px 13px;
   border: none;
   @include rounded(4px);
-  @include mq('lg') {
+  @include mq('sm') {
     text-align: center;
   }
 }

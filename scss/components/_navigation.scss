@@ -1,35 +1,23 @@
 // **********************************************
-// _navigation.scss
+// components/_navigation.scss
 // styles related to the navigation
 // **********************************************
 
+/* ==============================================
+  Navigation Styles
+================================================ */
+
 .nav {
   margin-top: 45px;
-  @include mq('lg') {
+  margin-bottom: 0;
+  @include mq('sm') {
     margin-top: 24px;
+  }
+  @include mq('med') {
+    @include flexbox($disp: flex, $just: flex-start);
     margin-left: 130px;
   }
-}
-
-.nav__item {
-  @include mq('lg') {
-    display: inline-block;
-    min-width: 90px;
-    margin-right: 20px;
-  }
-  a {
-    display: block;
-    text-align: center;
-    @include padding(.8em);
-    font-size: 1.1em;
-    &:hover {
-      @include background($secondary-color);
-      color: $white;
-      @include rounded(4px);
-    }
-    @include mq('lg') {
-      font-size: 1.2em;
-      padding: 0.5em;
-    }
+  .nav__item {
+    @extend %nav__item;
   }
 }
