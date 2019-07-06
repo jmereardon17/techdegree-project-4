@@ -695,13 +695,17 @@ p {
 }
 .grid__col--7.centered {
   margin-top: 18px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (min-width: 768px) {
   .grid__col--7.centered {
     margin-top: 0;
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .grid__col--7.centered {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .grid__col--8.theme__colors {
