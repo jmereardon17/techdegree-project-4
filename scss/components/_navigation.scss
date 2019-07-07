@@ -17,7 +17,7 @@
     @include flexbox($disp: flex, $just: flex-start);
     margin-left: 130px;
   }
-  .nav__item {
+  &__item {
     @extend %nav__item;
   }
 }
