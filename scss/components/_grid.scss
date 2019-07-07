@@ -103,7 +103,7 @@
     }
   }
   &__col--3.theme__colors {
-    @include spacing(18px, 16px); /* this style */
+    @include spacing(18px, 16px);
     & + & {
       @include spacing(6px, 16px);
     }
