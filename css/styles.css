@@ -369,13 +369,13 @@ p {
 }
 
 @media (min-width: 768px) {
-  .nav .nav__item {
+  .nav__item {
     display: inline-block;
     min-width: 90px;
     margin-right: 20px;
   }
 }
-.nav .nav__item a {
+.nav__item a {
   display: block;
   text-align: center;
   text-decoration: none;
@@ -383,13 +383,13 @@ p {
   padding: 0.8em;
   font-size: 1.1em;
 }
-.nav .nav__item a:hover {
+.nav__item a:hover {
   background-color: #58e1c1;
   color: #fff;
   border-radius: 4px;
 }
 @media (min-width: 768px) {
-  .nav .nav__item a {
+  .nav__item a {
     font-size: 1.2em;
     padding: 0.5em;
   }
@@ -626,7 +626,6 @@ p {
 }
 .grid__col--3.theme__colors {
   margin-top: 18px;
-  /* this style */
 }
 @media (min-width: 768px) {
   .grid__col--3.theme__colors {
