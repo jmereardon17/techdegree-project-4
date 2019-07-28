@@ -32,7 +32,7 @@
     padding: .8em;
     font-size: 1.1em;
     &:hover {
-      @include background($secondary-color);
+      background: $secondary-color;
       color: $white;
       @include rounded(4px);
     }
