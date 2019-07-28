@@ -384,7 +384,7 @@ p {
   font-size: 1.1em;
 }
 .nav__item a:hover {
-  background-color: #58e1c1;
+  background: #58e1c1;
   color: #fff;
   border-radius: 4px;
 }
@@ -395,7 +395,7 @@ p {
   }
 }
 
-.btn--info, .btn--warning, .btn--error, .btn--success, .btn--default {
+[class*=btn--] {
   display: block;
   width: 94%;
   font-size: 0.95em;
@@ -409,7 +409,7 @@ p {
   padding: 0.9em;
 }
 @media (min-width: 998px) {
-  .btn--info, .btn--warning, .btn--error, .btn--success, .btn--default {
+  [class*=btn--] {
     display: inline-block;
     width: 170px;
     padding-left: 0.05em;
@@ -418,7 +418,7 @@ p {
   }
 }
 @media (min-width: 1440px) {
-  .btn--info, .btn--warning, .btn--error, .btn--success, .btn--default {
+  [class*=btn--] {
     max-width: 175px;
   }
 }
@@ -733,40 +733,40 @@ p {
 }
 
 .theme__colors.grid__col--1 {
-  background-color: #fff;
+  background: #fff;
 }
 .theme__colors.grid__col--1 {
-  background-color: #fff;
+  background: #fff;
 }
 .theme__colors.grid__col--3 {
-  background-color: #ddb2ed;
+  background: #ddb2ed;
 }
 .theme__colors.grid__col--4 {
-  background-color: #7ee7fc;
+  background: #7ee7fc;
 }
 .theme__colors.grid__col--5 {
-  background-color: #89d99f;
+  background: #89d99f;
 }
 .theme__colors.grid__col--6 {
-  background-color: #40acc9;
+  background: #40acc9;
 }
 .theme__colors.grid__col--7 {
-  background-color: #eba0a3;
+  background: #eba0a3;
 }
 .theme__colors.grid__col--8 {
-  background-color: #fca086;
+  background: #fca086;
 }
 .theme__colors.grid__col--1 {
-  background-color: #fff;
+  background: #fff;
 }
 .theme__colors.grid__col--1 {
-  background-color: #fff;
+  background: #fff;
 }
 .theme__colors.grid__col--1 {
-  background-color: #fff;
+  background: #fff;
 }
 .theme__colors.grid__col--12 {
-  background-color: #81e6ce;
+  background: #81e6ce;
 }
 
 /* ==============================================
@@ -825,8 +825,7 @@ p {
 @media (min-width: 998px) {
   .nav {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 130px;
+    justify-content: flex-end;
   }
 }
 /* ==============================================
@@ -851,7 +850,7 @@ p {
   background-color: #51ddfc;
 }
 .btn--success {
-  background-color: #63cc82;
+  background-color: #62cc82;
 }
 .btn--error {
   background-color: #e4757a;
@@ -861,6 +860,8 @@ p {
 }
 .btn--info {
   background-color: #927bc1;
+}
+.btn--info {
   margin-bottom: 25px;
 }
 
