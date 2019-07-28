@@ -3,11 +3,6 @@
 // used to create mixins
 // **************************************
 
-// Theme Colors
-@mixin background($bg) {
-  background-color: $bg;
-}
-
 // Layout
 @mixin rounded($radius) {
   border-radius: $radius;
@@ -47,7 +42,7 @@
 
 // Flexbox Settings
 @mixin flexbox(
-  $disp: null,
+  $disp: flex,
   $dir: null,
   $wrap: null,
   $just: null
