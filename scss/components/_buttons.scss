@@ -7,26 +7,19 @@
   Button Styles
 ================================================ */
 
+[class*="btn--"] {
+  @extend %btn;
+}
+
 .btn {
-  &--default {
-    @extend %btn;
-    @include background($btn-default);
+
+  @each $btn, $color in $btn-theme-colors {
+    &--#{$btn} {
+      background-color: $color;
+    }
   }
-  &--success {
-    @extend %btn;
-    @include background($btn-success);
-  }
-  &--error {
-    @extend %btn;
-    @include background($btn-error);
-  }
-  &--warning {
-    @extend %btn;
-    @include background($btn-warning);
-  }
+
   &--info {
-    @extend %btn;
-    @include background($btn-info);
     margin-bottom: 25px;
   }
 }
