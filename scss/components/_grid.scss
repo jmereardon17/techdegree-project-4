@@ -29,21 +29,23 @@
   &__row {
     // padding: 1em 10px;
     padding: 1em 0;
-    @include flexbox($disp: flex, $dir: column);
+    @include flexbox($dir: column) {
 
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @include mq('sm') {
-      padding-left: 10px;
-      padding-right: 10px;
-      @include flexbox($dir: row);
+      // NOTE: replace with media query mixin if aiming for exceeds
+      @include mq('sm') {
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: row;
+      }
     }
     &:nth-of-type(1) {
       @include mq('sm') {
-        @include flexbox($dir: column);
+        flex-direction: column;
         align-items: center;
       }
       @include mq('med') {
-        @include flexbox($dir: row, $just: space-between);
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
   }
@@ -89,7 +91,7 @@
 
   &__col--12 {
     @include mq('med') {
-      @include flexbox($disp: flex, $just: space-around) {
+      @include flexbox($just: space-around) {
         align-items: center;
       }
     }
@@ -173,7 +175,7 @@
 
     $i: index($theme-colors, $color);
     &--#{$i} {
-      @include background($color);
+      background: $color;
       @extend %col;
     }
 
