@@ -3,26 +3,6 @@
 // used to create mixins
 // **************************************
 
-// Layout
-@mixin rounded($radius) {
-  border-radius: $radius;
-}
-
-@mixin center($width: null) {
-  width: $width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@mixin spacing($top: null, $btm) {
-  margin-top: $top;
-  @content;
-  @include mq('sm') {
-    margin-top: 0;
-    margin-bottom: $btm;
-  }
-}
-
 // Media Queries
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);
