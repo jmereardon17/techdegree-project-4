@@ -40,7 +40,7 @@
   line-height: 1.2;
   color: $color-shade;
   border-left: 9px solid $secondary-color;
-  @include rounded(4px);
+  @extend %rounded;
   margin-right: 0;
   margin-left: 1em;
   padding: 0 1.1em 0 .8em;
