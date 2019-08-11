@@ -14,7 +14,7 @@
 %img {
   max-width: 100%;
   display: block;
-  @include center();
+  @extend %centered;
 }
 
 // Nav Items
@@ -34,7 +34,7 @@
     &:hover {
       background: $secondary-color;
       color: $white;
-      @include rounded(4px);
+      @extend %rounded;
     }
     @include mq('sm') {
       font-size: 1.2em;
@@ -54,7 +54,7 @@
   text-transform: uppercase;
   margin: 1.6em auto 0;
   border: none;
-  @include rounded(4px);
+  @extend %rounded;
   padding: .9em;
   @include mq('med') {
     display: inline-block;
@@ -68,14 +68,23 @@
   }
 }
 
-// Grid Columns
+%centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%rounded {
+  border-radius: 4px;
+}
+
+// grid column styles
 %col {
   font-size: .95em;
   font-weight: $bold;
   color: $color-shade;
   padding: 11px 13px;
   border: none;
-  @include rounded(4px);
+  @extend %rounded;
   @include mq('sm') {
     text-align: center;
   }
