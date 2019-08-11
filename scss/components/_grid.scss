@@ -12,12 +12,13 @@
 
 // main container
 .container {
-  @include center(95%);
+  width: 95%;
+  @extend %centered;
   padding: 0 1.2em 1.4em 1.2em;
   @include mq('sm') {
     padding-top: 1.4em;
   }
-  @include mq('lg') {
+  @include mq('med') {
     max-width: $max-width;
   }
 }
@@ -27,7 +28,6 @@
 
   // .grid__row
   &__row {
-    // padding: 1em 10px;
     padding: 1em 0;
     @include flexbox($dir: column) {
 
@@ -37,15 +37,24 @@
         padding-right: 10px;
         flex-direction: row;
       }
-    }
-    &:nth-of-type(1) {
-      @include mq('sm') {
-        flex-direction: column;
-        align-items: center;
+      &:first-child { // Navigation row
+        @include mq('sm') {
+          flex-direction: column;
+          align-items: center;
+        }
+        @include mq('med') {
+          flex-direction: row;
+          justify-content: space-between;
+        }
       }
-      @include mq('med') {
-        flex-direction: row;
-        justify-content: space-between;
+    }
+    // Loop through the rows 6 to 12 to style them.
+    @for $i from 6 through 12 {
+      &:nth-of-type(#{$i}) {
+        @include mq('med') {
+          padding-top: 1.5em;
+          padding-bottom: 1.5em;
+        }
       }
     }
   }
@@ -104,53 +113,10 @@
       }
     }
   }
-  &__col--3.theme__colors {
-    @include spacing(18px, 16px);
-    & + & {
-      @include spacing(6px, 16px);
-    }
-  }
-  &__col--4.theme__colors {
-    margin-bottom: 0px;
-    @include mq('sm') {
-      margin-bottom: 16px;
-    }
-    & + & {
-      @include spacing(6px, 16px);
-    }
-  }
-  &__col--5.theme__colors {
-    @include spacing(18px, 16px);
-  }
-  &__col--6.theme__colors {
-    @include mq('sm') {
-      margin-bottom: 16px;
-    }
-    & + & {
-      @include spacing(6px, 16px) {
-        margin-bottom: 8px;
-      }
-    }
-  }
-  &__col--7.theme__colors {
-    @include spacing(6px, 16px);
-  }
   &__col--7.centered {
-    @include spacing(18px, 20px);
     @include mq('sm') {
       margin-left: auto;
       margin-right: auto;
-    }
-  }
-  &__col--8.theme__colors {
-    @include spacing(18px, 16px) {
-      margin-bottom: -5px;
-    }
-  }
-  &__col--12.theme__colors {
-    margin-bottom: 8px;
-    @include mq('sm') {
-      margin-bottom: 16px;
     }
   }
 }
@@ -169,14 +135,21 @@
   }
 }
 
-// loop to style the backgrounds of certain grid cols
 .theme__colors.grid__col {
+  &--4 {
+    margin-bottom: 0;
+  }
+  // loop through the themed-colored grid-cols to style them.
   @each $color in $theme-colors {
 
     $i: index($theme-colors, $color);
     &--#{$i} {
       background: $color;
       @extend %col;
+      @include mq('med') {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
 
   }
