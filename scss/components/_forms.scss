@@ -36,8 +36,7 @@
   outline: 0;
   border: none;
   border-bottom: 6px solid $secondary-color;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %centered;
   margin-bottom: 1.8em;
   font-weight: $regular;
 }
